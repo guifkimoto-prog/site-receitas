@@ -1,0 +1,191 @@
+/* Estilos do site de receitas */
+
+:root {
+  --vermelho: #b3121f;
+  --vermelho-escuro: #8c0d17;
+  --fundo: #faf7f2;
+}
+
+body {
+  background-color: var(--fundo);
+  font-family: "Nunito", sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: "Playfair Display", serif;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: var(--vermelho);
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+}
+
+/* Topo da página inicial */
+.topo {
+  padding: 50px 0 30px;
+  text-align: center;
+}
+
+.topo h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.topo p {
+  color: #777;
+}
+
+/* Cards das receitas */
+.card-receita {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-receita:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-receita img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-receita .card-title {
+  font-weight: 700;
+}
+
+.info-rapida {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.btn-abrir {
+  background-color: var(--vermelho);
+  color: #fff;
+  border-radius: 30px;
+  padding: 6px 35px;
+  font-weight: 600;
+}
+
+.btn-abrir:hover {
+  background-color: var(--vermelho-escuro);
+  color: #fff;
+}
+
+/* Página da receita */
+.foto-receita {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.barra-info {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.barra-info span {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.estrelas {
+  color: #f5a623;
+}
+
+.caixa {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.caixa h3 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.lista-ingredientes li {
+  padding: 5px 0;
+}
+
+.subtitulo {
+  font-weight: 700;
+  color: var(--vermelho);
+  margin-top: 10px;
+}
+
+.passos {
+  list-style: none;
+  counter-reset: passo;
+  padding-left: 0;
+}
+
+.passos li {
+  counter-increment: passo;
+  position: relative;
+  padding: 0 0 18px 50px;
+}
+
+.passos li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--vermelho);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 34px;
+}
+
+.comentario {
+  border-left: 4px solid var(--vermelho);
+  background-color: #fdfdfd;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.comentario small {
+  color: #999;
+}
+
+.btn-vermelho {
+  background-color: var(--vermelho);
+  color: #fff;
+}
+
+.btn-vermelho:hover {
+  background-color: var(--vermelho-escuro);
+  color: #fff;
+}
+
+footer {
+  background-color: #222;
+  color: #bbb;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
